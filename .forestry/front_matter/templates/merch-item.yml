@@ -25,3 +25,5 @@ fields:
   label: Item ID
   description: Item ID used for add to cart button. Ask Zack if you don't know how
     to do this.
+pages:
+- _posts/test.md
