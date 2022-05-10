@@ -7,3 +7,21 @@ fields:
   config:
     required: false
   label: Merch Item Name
+- name: cover_photo
+  type: file
+  config:
+    maxSize: 64
+  label: Cover Photo
+  description: Image that appears in merch "gallery" view
+- name: item_photo_gallery
+  type: image_gallery
+  config: {}
+  label: Item Photo Gallery
+  description: Photos that should appear in a carousel on the item page
+- name: item_id
+  type: text
+  config:
+    required: false
+  label: Item ID
+  description: Item ID used for add to cart button. Ask Zack if you don't know how
+    to do this.
