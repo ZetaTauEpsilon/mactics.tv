@@ -1,4 +1,9 @@
 ---
 label: Merch Item
 hide_body: true
-fields: []
+fields:
+- name: merch_item_name
+  type: text
+  config:
+    required: false
+  label: Merch Item Name
