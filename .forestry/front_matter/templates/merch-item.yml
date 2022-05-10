@@ -1,11 +1,12 @@
 ---
 label: Merch Item
 hide_body: true
+display_field: merch_item_name
 fields:
 - name: merch_item_name
   type: text
   config:
-    required: false
+    required: true
   label: Merch Item Name
 - name: cover_photo
   type: file
@@ -21,7 +22,7 @@ fields:
 - name: item_id
   type: text
   config:
-    required: false
+    required: true
   label: Item ID
   description: Item ID used for add to cart button. Ask Zack if you don't know how
     to do this.
@@ -33,5 +34,11 @@ fields:
   label: Type
   description: DO NOT CHANGE
   default: item
+- name: price
+  type: text
+  config:
+    required: false
+  label: Price
+  description: It's the price lol
 pages:
 - _posts/test.md
