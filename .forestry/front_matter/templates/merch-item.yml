@@ -41,4 +41,4 @@ fields:
   label: Price
   description: It's the price lol
 pages:
-- _posts/2022-05-10-test.md
+- _merch/TestMerch.md
