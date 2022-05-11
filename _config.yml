@@ -52,3 +52,5 @@ collections:
   merch:
     output: true
     permalink: /:collection/:name
+  videos:
+    output: true

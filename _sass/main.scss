@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap");
+html {
+  overflow: hidden;
+  height: 100%;
+}
 
 body {
   background-color: #5794f7;
@@ -6,6 +10,8 @@ body {
   background-repeat: no-repeat;
   background-size: 800px;
   background-position-x: 100%;
+  height: 100%;
+  overflow: auto;
 }
 
 .background-mac {
@@ -16,6 +22,20 @@ body {
   filter: drop-shadow(5px 5px 5px black);
 }
 
+.background-gradient {
+  position: fixed;
+  z-index: -2;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 0, 0, 0),
+    rgb(5, 3, 103)
+  );
+}
+
 .header {
   display: flex;
   width: 100vw;
@@ -23,6 +43,40 @@ body {
   align-items: center;
   position: fixed;
   top: 0;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(87, 148, 247, 0.8),
+    50%,
+    rgba(87, 148, 247, 0)
+  );
+}
+
+.videoheader {
+  color: white;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 2%;
+  padding-bottom: 1%;
+  border-bottom: 1px solid white;
+  font-size: 26px;
+  border-radius: 6px 6px 0 0;
+  background-color: rgb(128, 164, 242);
+}
+
+.videothumb {
+  aspect-ratio: 16 / 9;
+  width: 20vw;
+  background-size: cover;
+  background-position-y: 50%;
+  border-radius: 2px;
+}
+
+.videorow {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 a {
@@ -85,7 +139,7 @@ h1 {
   color: white;
   padding-left: 3%;
   padding-right: 3%;
-  padding-top: 3%;
+  padding-top: 2%;
   padding-bottom: 1%;
   border-bottom: 1px solid white;
   font-size: 26px;
@@ -95,9 +149,14 @@ h1 {
 
 .silkscreen {
   background-color: rgba(128, 164, 242, 0.5);
+  background-image: linear-gradient(
+    to bottom,
+    rgba(128, 164, 242, 0.3),
+    rgba(128, 164, 242, 0.8)
+  );
   border-radius: 6px;
   margin-top: 50px;
-  margin-left: 4%;
+  margin-left: 1%;
   margin-right: 4%;
 }
 

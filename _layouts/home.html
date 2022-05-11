@@ -14,11 +14,25 @@ layout: default
   player.setVolume(0.5)
 </script>
 <div class="silkscreen">
+  <div class="videoheader">Recent Videos</div>
+  <div class="videorow">
+    {% assign sortedvids = site.videos | sort: "publish_date" %} {% for item in
+    sortedvids %}
+    <a href="https://www.youtube.com/watch?v={{item.video_id}}">
+      <div
+        class="videothumb grow"
+        style="background-image: url('https://img.youtube.com/vi/{{item.video_id}}/0.jpg');"
+      ></div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+<div class="silkscreen">
   <div class="merchheader">Merch</div>
   <div class="merch-gallery">
     {% for item in site.merch %}
-    <a href="/merch/{{item.item_slug}}">
-      <div class="merch-container grow">
+    <a class="grow" href="/merch/{{item.item_slug}}">
+      <div class="merch-container">
         <div
           class="merch-item"
           style="background-image: url('{{ item.cover_photo}}')"
