@@ -7,6 +7,7 @@ fields:
   type: text
   config:
     required: true
+    max: 24
   label: Merch Item Name
 - name: cover_photo
   type: file
