@@ -1,0 +1,22 @@
+---
+label: YT Video
+hide_body: true
+fields:
+- name: video_id
+  type: text
+  config:
+    required: false
+  label: Video ID
+  description: Taken from youtube URL.<br><a href="https://www.youtube.com/watch?v=oH-x2Wgd-0c"
+    title="https://www.youtube.com/watch?v=oH-x2Wgd-0c" target="_blank">https://www.youtube.com/watch?v=</a>{THIS
+    RIGHT HERE}<br>Used to pull thumbnail.
+- name: publish_date
+  type: datetime
+  label: Publish Date
+  description: Used for sorting. 3 Most Recent will be shown.
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+  default: now

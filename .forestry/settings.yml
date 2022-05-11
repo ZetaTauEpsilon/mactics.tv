@@ -5,18 +5,19 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
+  path: _videos
+  label: Videos
+  create: documents
+  match: "**/*"
+  templates:
+  - yt-video
+- type: directory
   path: _merch
   label: Merch Items
   create: documents
   match: "**/*"
   templates:
   - merch-item
-- type: jekyll-pages
-  label: Pages
-  create: all
-- type: jekyll-posts
-  label: Posts
-  create: all
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
