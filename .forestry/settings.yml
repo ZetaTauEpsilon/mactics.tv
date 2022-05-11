@@ -5,6 +5,13 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
+  path: _videos
+  label: Videos
+  create: documents
+  match: "**/*"
+  templates:
+  - yt-video
+- type: directory
   path: _merch
   label: Merch Items
   create: documents
