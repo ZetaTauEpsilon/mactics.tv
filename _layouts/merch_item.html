@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+<div class="flex-center">
+  <h1>{{ page.merch_item_name}}</h1>
+</div>
+<section class="carousel" aria-label="Gallery">
+  <ol class="carousel__viewport">
+    {% assign index = 0 %} {% for item in page.item_photo_gallery %} {% if index
+    == 0 %} {% assign last = page.item_photo_gallery.size %} {% else %} {%
+    assign last = index | minus: 1 %} {% endif %} {% if index ==
+    page.item_photo_gallery.size %} {% assign next = 0 %} {% else %} {% assign
+    next = index | plus: 1 %} {% endif %}
+
+    <li
+      id="carousel__slide{{index}}"
+      tabindex="0"
+      class="carousel__slide"
+      style="background-image: url('{{item}}')"
+    >
+      <div class="carousel__snapper">
+        <a href="#carousel__slide{{last}}" class="carousel__prev"
+          >Go to last slide</a
+        >
+        <a href="#carousel__slide{{next}}" class="carousel__next"
+          >Go to next slide</a
+        >
+      </div>
+    </li>
+    {% assign index = index | plus: 1 %} {% endfor %}
+  </ol>
+  <aside class="carousel__navigation">
+    <ol class="carousel__navigation-list">
+      {% assign index = 0 %} {% for item in page.item_photo_gallery %}
+
+      <li class="carousel__navigation-item">
+        <a href="#carousel__slide{{index}}" class="carousel__navigation-button"
+          >Go to slide {{index}}</a
+        >
+      </li>
+      {% assign index = index | plus: 1 %} {% endfor %}
+    </ol>
+  </aside>
+</section>
