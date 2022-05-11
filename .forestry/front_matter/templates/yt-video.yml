@@ -20,5 +20,3 @@ fields:
     time_format: 
     display_utc: false
   default: now
-pages:
-- _videos/ricklol.md

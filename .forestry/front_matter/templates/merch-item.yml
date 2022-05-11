@@ -16,6 +16,21 @@ fields:
   label: Item Slug
   description: Name of item in a format suitable for a variable, <strong>NO WHITESPACE</strong>,
     <strong>MUST BE THE SAME AS FILENAME</strong>, case insensitive.
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Item Description
+- name: price
+  type: text
+  config:
+    required: false
+  label: Price
+  description: It's the price lol
 - name: cover_photo
   type: file
   config:
@@ -27,18 +42,5 @@ fields:
   config: {}
   label: Item Photo Gallery
   description: Photos that should appear in a carousel on the item page
-- name: item_id
-  type: text
-  config:
-    required: true
-  label: Item ID
-  description: Item ID used for add to cart button. Ask Zack if you don't know how
-    to do this.
-- name: price
-  type: text
-  config:
-    required: false
-  label: Price
-  description: It's the price lol
 pages:
 - _merch/TestMerch.md
